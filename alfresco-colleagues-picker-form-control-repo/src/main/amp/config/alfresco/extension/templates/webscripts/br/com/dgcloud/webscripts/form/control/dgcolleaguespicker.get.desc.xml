@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>DGCloud Colleagues Picker</shortname>
+	<description>Java-backed Colleagues Picker</description>
+	<url>/form/control/dgcolleaguespicker</url>
+	<format default="json" />
+	<authentication>user</authentication>
+	<transaction allow="readonly">required</transaction>
+</webscript>

@@ -1,0 +1,16 @@
+<alfresco-config>
+
+	<config>
+		<forms>
+			<default-controls>
+				<type name="association:cm:person"
+					template="/org/alfresco/components/form/controls/sitemembers.ftl" />
+				<type name="association:cm:authority"
+					template="/org/alfresco/components/form/controls/sitemembers.ftl" />
+				<type name="association:cm:authorityContainer"
+					template="/org/alfresco/components/form/controls/sitemembers.ftl" />
+			</default-controls>
+		</forms>
+	</config>
+
+</alfresco-config>

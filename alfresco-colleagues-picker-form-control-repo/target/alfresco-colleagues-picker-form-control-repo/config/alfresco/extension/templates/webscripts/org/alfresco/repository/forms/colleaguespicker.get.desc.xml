@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>ColleaguesPickerList</shortname>
+  <description>Service to return metadata of users colleagues to display in the object finder.</description>
+  <url>/api/forms/colleaguespicker/colleagues</url>
+  <format default="json"/>
+  <authentication>user</authentication>
+  <transaction allow="readonly">required</transaction>
+</webscript>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.dgcloud</groupId>
+	<artifactId>alfresco-colleagues-picker-form-control-share</artifactId>
+	<version>1.0</version>
+	<name>alfresco-colleagues-picker-form-control-share</name>
+	<packaging>amp</packaging>
+	<description>alfresco-colleagues-picker-form-control-share</description>
+
+	<parent>
+		<groupId>org.alfresco.maven</groupId>
+		<artifactId>alfresco-sdk-parent</artifactId>
+		<version>1.1.1</version>
+	</parent>
+
+	<properties>
+		<alfresco.groupId>org.alfresco</alfresco.groupId>
+		<alfresco.version>4.2.f</alfresco.version>
+		<app.log.root.level>WARN</app.log.root.level>
+		<alfresco.data.location>alf_data_dev</alfresco.data.location>
+		<alfresco.client.war>share</alfresco.client.war>
+		<alfresco.client.war.groupId>org.alfresco</alfresco.client.war.groupId>
+		<alfresco.client.war.version>4.2.f</alfresco.client.war.version>
+		<env>local</env>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>${alfresco.groupId}</groupId>
+				<artifactId>alfresco-platform-distribution</artifactId>
+				<version>${alfresco.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>${alfresco.groupId}</groupId>
+			<artifactId>alfresco-share</artifactId>
+			<version>${alfresco.version}</version>
+			<!-- Exclusão conforme indicação no ticket ALF-16947 https://issues.alfresco.com/jira/browse/ALF-16947 -->
+			<exclusions>
+				<exclusion>
+					<groupId>${alfresco.groupId}</groupId>
+					<artifactId>alfresco-web-framework-commons</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>alfresco-public</id>
+			<url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>alfresco-public-snapshots</id>
+			<url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
